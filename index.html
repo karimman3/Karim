@@ -14,9 +14,9 @@
             padding: 0;
         }
         .container {
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-            background-image: url('BG.webp'); /* استبدل 'your-image-path.jpg' بمسار الصورة الخاص بك */
+            background-image: url('BG.webp'); /* استبدل 'BG.webp' بمسار الصورة الخاص بك */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -31,27 +31,28 @@
             border-radius: 10px;
         }
         h1 {
-            font-size: 50px;
+            font-size: 5vw;
             margin-bottom: 10px;
         }
         .price {
-            font-size: 60px;
+            font-size: 6vw;
             margin-bottom: 20px;
         }
         .description {
-            font-size: 30px;
+            font-size: 3vw;
             margin-bottom: 30px;
         }
         .button-container {
             display: flex;
             justify-content: space-around;
             margin-top: 30px;
+            gap: 20px; /* إضافة مسافة بين الأزرار */
         }
         a {
             background-color: #FF6600;
             color: white;
-            font-size: 20px;
-            padding: 15px 20px;
+            font-size: 4vw;
+            padding: 10px 20px;
             border: none;
             border-radius: 10px;
             text-decoration: none;
@@ -60,17 +61,34 @@
         a:hover {
             background-color: #cc5200;
         }
+        .ad-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-            
-            <div class="button-container">
-                <a href="Pro.html">أشخاص العديون</a>
-                <a href="https://example.com/discount">المستفدون من تخفيض 25%</a>
-            </div>
+        <div class="content">
+            <h1>عرض الفايبر ديل</h1>
+            <div class="price">السعر: 199 درهم</div>
+            <div class="description">احصل على تخفيض 25% على الاشتراك السنوي!</div>
+        </div>
+        
+        <div class="button-container">
+            <a href="Pro.html">أشخاص العديون</a>
+            <a href="https://example.com/discount">المستفدون من تخفيض 25%</a>
+        </div>
+    </div>
 
+    <div class="ad-container">
+        <!-- مساحة إعلان غوغل -->
+        <p>إعلان غوغل سيظهر هنا</p>
     </div>
 
 </body>
