@@ -19,7 +19,7 @@
             margin: 0 auto;
             border: 1px solid #000;
             padding: 10px;
-            text-align: center; /* لتوسيط النصوص داخل الحاوية */
+            text-align: center;
         }
         .header {
             background-color: #ffcc00;
@@ -51,32 +51,28 @@
         .details ul {
             list-style-type: none;
             padding: 0;
-            text-align: center; /* لتوسيط المحتوى داخل القائمة */
+            text-align: center;
         }
         .details ul li {
             margin-bottom: 10px;
-            text-align: center; /* لتوسيط النصوص داخل العناصر */
-        }
-        .details ul li::before {
-            content: "✔";
-            color: orange;
-            margin-left: 5px;
+            text-align: center;
         }
         .footer {
             text-align: center;
             margin-top: 20px;
         }
-        .footer button {
+        .footer a {
             background-color: #ff6600;
             color: #fff;
             border: none;
             padding: 10px 20px;
             font-size: 18px;
+            text-decoration: none;
             cursor: pointer;
         }
         .icon-text {
             display: flex;
-            justify-content: center; /* لتوسيط الأيقونة والنص */
+            justify-content: center;
             align-items: center;
         }
         .icon-text img {
@@ -93,14 +89,13 @@
             font-size: 16px;
             direction: ltr;
         }
-        /* تعديل اتجاه النصوص لكل لغة */
         .french {
             direction: ltr;
-            text-align: center; /* توسيط النص الفرنسي */
+            text-align: center;
         }
         .arabic {
             direction: rtl;
-            text-align: center; /* توسيط النص العربي */
+            text-align: center;
         }
         @media screen and (max-width: 768px) {
             .container {
@@ -129,7 +124,7 @@
         
         <div class="price-section arabic" id="price-ar">
             449 درهم/الشهر
-            <span>200 ميغا لمدة 3 أشهر، ثم 100 ميغا</span>
+            <span>2000 ميغا لمدة 3 أشهر، ثم 100 ميغا</span>
         </div>
         <div class="price-section french" id="price-fr" style="display:none;">
             449 Dh/mois
@@ -148,30 +143,30 @@
                 <li class="french" id="detail-fr-3" style="display:none;">Illimité vers le fixe national</li>
 
                 <li class="icon-text arabic" id="detail-ar-4">
-                    <img src="Lo.webp" alt="لوجو تركيب"> 
-                    تركيب مجاني
+                    <img src="Lo1.webp" alt="لوجو تركيب"> 
+                تركيب مجاني 
                 </li>
                 <li class="icon-text french" id="detail-fr-4" style="display:none;">
-                    <img src="Lo.webp" alt="Logo installation"> 
+                    <img src="Lo1.webp" alt="Logo installation"> 
                     Installation à 0 Dh
                 </li>
 
                 <li class="icon-text arabic" id="detail-ar-5">
-                    <img src="Ro1.webp" alt="لوجو روتور">
+                    <img src="Ro.webp" alt="لوجو روتور">
                     موجه Wi-Fi 6 مجاني
                 </li>
                 <li class="icon-text french" id="detail-fr-5" style="display:none;">
-                    <img src="Ro1.webp" alt="Logo routeur">
+                    <img src="Ro.webp" alt="Logo routeur">
                     Routeur Wi-Fi 6 à 0 Dh
                 </li>
             </ul>
         </div>
         
         <div class="footer arabic" id="footer-ar">
-            <button>أستفيد من العرض</button>
+            <a href="https://wa.me/212660201206" target="_blank">أستفيد من العرض</a>
         </div>
         <div class="footer french" id="footer-fr" style="display:none;">
-            <button>J'en profite</button>
+            <a href="https://wa.me/212660201206" target="_blank">J'en profite</a>
         </div>
     </div>
 
