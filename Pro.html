@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fibre d'Orange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            color: #f60;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f60;
+            color: #fff;
+            font-size: 20px;
+        }
+        .price-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #f60;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .price-button:hover {
+            background-color: #d54b00;
+        }
+        .subscribe-button {
+            display: inline-block;
+            padding: 15px 20px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .subscribe-button:hover {
+            background-color: #218838;
+        }
+        .speed {
+            font-size: 18px;
+            font-weight: bold;
+            color: #f60;
+        }
+        .orange {
+            background-color: #f60;
+            color: #fff;
+        }
+        .green {
+            background-color: #0f0;
+            color: #000;
+        }
+        .blue {
+            background-color: #00f;
+            color: #fff;
+        }
+        .info {
+            background-color: #eee;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .info p {
+            margin: 10px 0;
+        }
+
+        /* استعلامات الوسائط لتصميم متجاوب */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+            .price-button, .subscribe-button {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width: 601px) {
+            .price-button, .subscribe-button {
+                width: auto;
+            }
+        }
+
+        /* تنسيق الصور والفواصل */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%; /* عرض الصورة بالكامل */
+            max-width: 180px; /* أقصى عرض للصورة */
+            height: auto; /* الحفاظ على نسبة الأبعاد */
+            border-radius: 5px; /* حواف دائرية للصورة */
+        }
+        .divider {
+            width: 3px; /* عرض الخط العمودي */
+            height: 100px; /* ارتفاع الخط */
+            background-color: #f60; /* لون الخط */
+            margin: 0 10px; /* مسافة بين الصور والخط */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Fibre d'Orange</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th><a href="#" class="price-button">249 درهم/شهر</a></th>
+                    <th><a href="#" class="price-button">349 درهم/شهر</a></th>
+                    <th><a href="#" class="price-button">449 درهم/شهر</a></th>
+                    <th><a href="#" class="price-button">649 درهم/شهر</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span class="speed">50 Méga</span><br>لمدة 3 أشهر<br><span class="price">20 Méga بعد</span>
+                    </td>
+                    <td>
+                        <span class="speed">100 Méga</span><br>لمدة 3 أشهر<br><span class="price">50 Méga بعد</span>
+                    </td>
+                    <td>
+                        <span class="speed">200 Méga</span><br>لمدة 3 أشهر<br><span class="price">100 Méga بعد</span>
+                    </td>
+                    <td>
+                        <span class="speed">200 Méga</span><br>لمدة 3 أشهر
+                    </td>
+                </tr>
+                <tr>
+                    <td class="orange">2H*</td>
+                    <td class="orange">3H*</td>
+                    <td class="green">4H*</td>
+                    <td class="blue">6H*</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" class="subscribe-button">إشتراك</a>
+                    </td>
+                    <td>
+                        <a href="#" class="subscribe-button">إشتراك</a>
+                    </td>
+                    <td>
+                        <a href="#" class="subscribe-button">إشتراك</a>
+                    </td>
+                    <td>
+                        <a href="#" class="subscribe-button">إشتراك</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="info">
+            <p>مكالمات غير محدودة نحو الأرقام الوطنية الثابتة</p>
+            <p>orange.ma/lafibredorange</p>
+        </div>
+
+        <!-- إضافة قسم الصور -->
+        <div class="image-container">
+            <img src="placeholder1.jpg" alt="صورة 1"> <!-- استبدل بـ src للصورة الفعلية -->
+            <div class="divider"></div>
+            <img src="placeholder2.jpg" alt="صورة 2"> <!-- استبدل بـ src للصورة الفعلية -->
+            <div class="divider"></div>
+            <img src="placeholder3.jpg" alt="صورة 3"> <!-- استبدل بـ src للصورة الفعلية -->
+            <div class="divider"></div>
+            <img src="placeholder4.jpg" alt="صورة 4"> <!-- استبدل بـ src للصورة الفعلية -->
+        </div>
+    </main>
+</body>
+</html>
