@@ -19,6 +19,7 @@
             margin: 0 auto;
             border: 1px solid #000;
             padding: 10px;
+            text-align: center; /* لتوسيط النصوص داخل الحاوية */
         }
         .header {
             background-color: #ffcc00;
@@ -50,22 +51,16 @@
         .details ul {
             list-style-type: none;
             padding: 0;
+            text-align: center; /* لتوسيط المحتوى داخل القائمة */
         }
         .details ul li {
             margin-bottom: 10px;
+            text-align: center; /* لتوسيط النصوص داخل العناصر */
         }
         .details ul li::before {
             content: "✔";
             color: orange;
             margin-left: 5px;
-        }
-        .orange-background {
-            background-color: #ff6600;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            font-size: 20px;
-            font-weight: bold;
         }
         .footer {
             text-align: center;
@@ -81,6 +76,7 @@
         }
         .icon-text {
             display: flex;
+            justify-content: center; /* لتوسيط الأيقونة والنص */
             align-items: center;
         }
         .icon-text img {
@@ -92,14 +88,19 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        .language-switch button {
-            background-color: #ff6600;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            cursor: pointer;
-            margin: 5px;
+        .language-switch select {
+            padding: 10px;
+            font-size: 16px;
+            direction: ltr;
+        }
+        /* تعديل اتجاه النصوص لكل لغة */
+        .french {
+            direction: ltr;
+            text-align: center; /* توسيط النص الفرنسي */
+        }
+        .arabic {
+            direction: rtl;
+            text-align: center; /* توسيط النص العربي */
         }
         @media screen and (max-width: 768px) {
             .container {
@@ -115,59 +116,61 @@
 <body>
 
     <div class="language-switch">
-        <button onclick="switchLanguage('ar')">العربية</button>
-        <button onclick="switchLanguage('fr')">Français</button>
+        <select onchange="switchLanguage(this.value)">
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
     </div>
 
     <div class="container" id="content">
         <!-- المحتوى بالعربية -->
-        <div class="header" id="header-ar">100 ميغا</div>
-        <div class="header" id="header-fr" style="display:none;">100 Méga</div>
+        <div class="header arabic" id="header-ar">100 ميغا</div>
+        <div class="header french" id="header-fr" style="display:none;">100 Méga</div>
         
-        <div class="price-section" id="price-ar">
+        <div class="price-section arabic" id="price-ar">
             449 درهم/الشهر
             <span>200 ميغا لمدة 3 أشهر، ثم 100 ميغا</span>
         </div>
-        <div class="price-section" id="price-fr" style="display:none;">
+        <div class="price-section french" id="price-fr" style="display:none;">
             449 Dh/mois
             <span>200 Méga pendant 3 mois, puis 100 méga</span>
         </div>
         
         <div class="details">
             <ul>
-                <li id="detail-ar-1">سرعة تصل إلى 200 ميغابايت/ثانية نزولاً و 200 ميغابايت/ثانية صعوداً</li>
-                <li id="detail-fr-1" style="display:none;">Jusqu'à 200 Mbit/s en téléchargement et 200 Mbit/s en envoi</li>
+                <li class="arabic" id="detail-ar-1">سرعة تصل إلى 200 ميغابايت/ثانية نزولاً و 200 ميغابايت/ثانية صعوداً</li>
+                <li class="french" id="detail-fr-1" style="display:none;">Jusqu'à 200 Mbit/s en téléchargement et 200 Mbit/s en envoi</li>
 
-                <li id="detail-ar-2">4 ساعات من المكالمات نحو الهواتف المحمولة الوطنية و الثابت الدولي (المنطقة 1)</li>
-                <li id="detail-fr-2" style="display:none;">4h d'appels vers le mobile national et fixe international (zone 1)</li>
+                <li class="arabic" id="detail-ar-2">4 ساعات من المكالمات نحو الهواتف المحمولة الوطنية و الثابت الدولي (المنطقة 1)</li>
+                <li class="french" id="detail-fr-2" style="display:none;">4h d'appels vers le mobile national et fixe international (zone 1)</li>
 
-                <li id="detail-ar-3">اتصال غير محدود نحو الهواتف الثابتة الوطنية</li>
-                <li id="detail-fr-3" style="display:none;">Illimité vers le fixe national</li>
+                <li class="arabic" id="detail-ar-3">اتصال غير محدود نحو الهواتف الثابتة الوطنية</li>
+                <li class="french" id="detail-fr-3" style="display:none;">Illimité vers le fixe national</li>
 
-                <li class="icon-text" id="detail-ar-4">
-                    <img src="logo-install.png" alt="لوجو تركيب"> 
+                <li class="icon-text arabic" id="detail-ar-4">
+                    <img src="Lo.webp" alt="لوجو تركيب"> 
                     تركيب مجاني
                 </li>
-                <li class="icon-text" id="detail-fr-4" style="display:none;">
-                    <img src="logo-install.png" alt="Logo installation"> 
+                <li class="icon-text french" id="detail-fr-4" style="display:none;">
+                    <img src="Lo.webp" alt="Logo installation"> 
                     Installation à 0 Dh
                 </li>
 
-                <li class="icon-text" id="detail-ar-5">
-                    <img src="logo-router.png" alt="لوجو روتور">
+                <li class="icon-text arabic" id="detail-ar-5">
+                    <img src="Ro1.webp" alt="لوجو روتور">
                     موجه Wi-Fi 6 مجاني
                 </li>
-                <li class="icon-text" id="detail-fr-5" style="display:none;">
-                    <img src="logo-router.png" alt="Logo routeur">
+                <li class="icon-text french" id="detail-fr-5" style="display:none;">
+                    <img src="Ro1.webp" alt="Logo routeur">
                     Routeur Wi-Fi 6 à 0 Dh
                 </li>
             </ul>
         </div>
         
-        <div class="footer" id="footer-ar">
+        <div class="footer arabic" id="footer-ar">
             <button>أستفيد من العرض</button>
         </div>
-        <div class="footer" id="footer-fr" style="display:none;">
+        <div class="footer french" id="footer-fr" style="display:none;">
             <button>J'en profite</button>
         </div>
     </div>
@@ -175,53 +178,19 @@
     <script>
         function switchLanguage(lang) {
             if (lang === 'ar') {
-                document.getElementById('header-ar').style.display = 'block';
-                document.getElementById('header-fr').style.display = 'none';
-                
-                document.getElementById('price-ar').style.display = 'block';
-                document.getElementById('price-fr').style.display = 'none';
-                
-                document.getElementById('detail-ar-1').style.display = 'block';
-                document.getElementById('detail-fr-1').style.display = 'none';
-
-                document.getElementById('detail-ar-2').style.display = 'block';
-                document.getElementById('detail-fr-2').style.display = 'none';
-
-                document.getElementById('detail-ar-3').style.display = 'block';
-                document.getElementById('detail-fr-3').style.display = 'none';
-
-                document.getElementById('detail-ar-4').style.display = 'block';
-                document.getElementById('detail-fr-4').style.display = 'none';
-
-                document.getElementById('detail-ar-5').style.display = 'block';
-                document.getElementById('detail-fr-5').style.display = 'none';
-
-                document.getElementById('footer-ar').style.display = 'block';
-                document.getElementById('footer-fr').style.display = 'none';
+                document.querySelectorAll('.arabic').forEach(function(el) {
+                    el.style.display = 'block';
+                });
+                document.querySelectorAll('.french').forEach(function(el) {
+                    el.style.display = 'none';
+                });
             } else if (lang === 'fr') {
-                document.getElementById('header-ar').style.display = 'none';
-                document.getElementById('header-fr').style.display = 'block';
-
-                document.getElementById('price-ar').style.display = 'none';
-                document.getElementById('price-fr').style.display = 'block';
-
-                document.getElementById('detail-ar-1').style.display = 'none';
-                document.getElementById('detail-fr-1').style.display = 'block';
-
-                document.getElementById('detail-ar-2').style.display = 'none';
-                document.getElementById('detail-fr-2').style.display = 'block';
-
-                document.getElementById('detail-ar-3').style.display = 'none';
-                document.getElementById('detail-fr-3').style.display = 'block';
-
-                document.getElementById('detail-ar-4').style.display = 'none';
-                document.getElementById('detail-fr-4').style.display = 'block';
-
-                document.getElementById('detail-ar-5').style.display = 'none';
-                document.getElementById('detail-fr-5').style.display = 'block';
-
-                document.getElementById('footer-ar').style.display = 'none';
-                document.getElementById('footer-fr').style.display = 'block';
+                document.querySelectorAll('.french').forEach(function(el) {
+                    el.style.display = 'block';
+                });
+                document.querySelectorAll('.arabic').forEach(function(el) {
+                    el.style.display = 'none';
+                });
             }
         }
     </script>
