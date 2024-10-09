@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Fibre d'Orange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            color: #f60;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تنسيق الصور والفواصل */
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%; /* عرض الصورة بالكامل */
+            max-width: 80px; /* أقصى عرض للصورة */
+            height: auto; /* الحفاظ على نسبة الأبعاد */
+            border-radius: 5px; /* حواف دائرية للصورة */
+        }
+        .divider {
+            width: 3px; /* عرض الخط العمودي */
+            height: 100px; /* ارتفاع الخط */
+            background-color: #f60; /* لون الخط */
+            margin: 0 10px; /* مسافة بين الصور والخط */
+        }
+
+        /* تنسيق مربع الخصم */
+        .discount-box {
+            background-color: #ffebcc;
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border: 2px solid #f60;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Fibre d'Orange</h1>
+    </header>
+
+    <main>
+        <!-- إضافة قسم الصور -->
+        <div class="image-container">
+            <img src="AD1.webp" alt="سرعات تنزيل وتحميل متماثلة"> 
+            <div class="divider"></div>
+            <img src="AD2.webp" alt="تركيب إحترافي في أقل من 2 أيام"> <!--src للصورة الفعلية -->
+            <div class="divider"></div>
+            <img src="AD3.webp" alt="روتور 0 درهم"> <!--src للصورة الفعلية -->
+            <div class="divider"></div>
+            <img src="AD5.webp" alt="صورة 4"> <!-- استبدل بـ src للصورة الفعلية -->
+        </div>
+
+        <!-- إضافة مربع الخصم -->
+        <div class="discount-box">
+            مستفيدون من خصم 25%
+        </div>
+    </main>
+</body>
+</html>
