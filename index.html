@@ -35,7 +35,7 @@
             display: flex;
             gap: 20px; /* المسافة بين الأزرار */
         }
-        a {
+        .button-container a {
             background-color: #FF6600;
             color: white;
             font-size: 16px;
@@ -45,16 +45,17 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
-        a:hover {
+        .button-container a:hover {
             background-color: #cc5200;
         }
         /* لجعل الكود متجاوبًا على الأجهزة الصغيرة */
         @media (max-width: 768px) {
             .button-container {
-                flex-direction: column;
+                flex-direction: row; /* يضمن أن الأزرار تبقى أفقية حتى على الشاشات الصغيرة */
                 bottom: 10px;
+                gap: 10px;
             }
-            a {
+            .button-container a {
                 padding: 10px;
                 font-size: 14px;
             }
