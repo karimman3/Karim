@@ -16,13 +16,11 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            position: relative;
         }
         .image-container {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
+            position: relative;
         }
         .image-container img {
             max-width: 100%;
@@ -30,21 +28,22 @@
             border-radius: 10px;
         }
         .button-container {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
-            justify-content: space-between;
             gap: 20px; /* المسافة بين الأزرار */
         }
         a {
             background-color: #FF6600;
             color: white;
             font-size: 16px;
-            padding: 15px 20px;
+            padding: 10px 20px;
             border: none;
             border-radius: 10px;
             text-decoration: none;
             transition: background-color 0.3s;
-            flex: 1;
-            text-align: center;
         }
         a:hover {
             background-color: #cc5200;
@@ -53,7 +52,11 @@
         @media (max-width: 768px) {
             .button-container {
                 flex-direction: column;
-                gap: 10px; /* تعديل المسافة في الشاشات الصغيرة */
+                bottom: 10px;
+            }
+            a {
+                padding: 10px;
+                font-size: 14px;
             }
         }
     </style>
@@ -63,10 +66,10 @@
     <div class="container">
         <div class="image-container">
             <img src="BG.webp" alt="صورة">
-        </div>
-        <div class="button-container">
-            <a href="#left-link">الزر الأيسر</a>
-            <a href="Pro.html">الزر الأيمن</a>
+            <div class="button-container">
+                <a href="#left-link">الزر الأيسر</a>
+                <a href="Pro.html">الزر الأيمن</a>
+            </div>
         </div>
     </div>
 
