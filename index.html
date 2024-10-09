@@ -6,6 +6,8 @@
     <title>La Fibre d'Orange</title>
     <meta name="description" content="احصل على أفضل خدمات الإنترنت فائقة السرعة مع Orange Fiber. استمتع بسرعات تصل إلى 200 ميغابايت في الثانية، تركيب احترافي وخدمة عملاء مميزة. اكتشف العروض الخاصة والاشتراكات المرنة الآن.">
     
+    <!-- استخدام Gzip/Brotli يتم على الخادم ولا يحتاج إلى تغييرات هنا -->
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,6 +30,8 @@
             max-width: 100%;
             height: auto;
             border-radius: 20px;
+            /* استخدام Lazy Loading للصور */
+            loading: lazy;
         }
         .button-container {
             position: absolute;
@@ -48,8 +52,9 @@
             transition: background-color 0.3s;
         }
         .button-container a:hover {
-            background-color: #fa732f;
+            background-color: #fa732f;  
         }
+        /* لجعل الكود متجاوبًا على الأجهزة الصغيرة */
         @media (max-width: 768px) {
             .button-container {
                 flex-direction: row;
@@ -63,21 +68,42 @@
         }
     </style>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1376112512950009" crossorigin="anonymous"></script>
+    <!-- تقليل عدد طلبات HTTP وتصغير JavaScript (تحميل ملفات JS بشكل غير متزامن) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1376112512950009"
+     crossorigin="anonymous"></script>
+
+    <!-- إضافة Google Analytics أو أي سكربت آخر بشكل غير متزامن -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXX-X');
+    </script>
+    
+    <!-- تمكين تصغير الملفات عبر الخادم لا يتطلب تغييرات هنا -->
+
 </head>
 <body>
 
     <div class="container">
         <div class="image-container">
-            <img src="BGA.webp" alt="صورة">
+            <img src="BGA.webp" alt="صورة" loading="lazy">
             <div class="button-container">
                 <a href="M.html">مستفدون من 25%</a>
                 <a href="Pro.html">عروض ارونج</a>
             </div>
         </div>
     </div>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1376112512950009" crossorigin="anonymous"></script>
+    
+    <!-- إضافة Lazy Loading لجميع الصور -->
+    <img src="AD1.webp" alt="عرض أرونج" loading="lazy">
+    <img src="AD2.webp" alt="تركيب احترافي" loading="lazy">
+    <img src="AD3.webp" alt="روتور مجاني" loading="lazy">
+    
+    <!-- إعلانات Google -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1376112512950009"
+     crossorigin="anonymous"></script>
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1376112512950009"
