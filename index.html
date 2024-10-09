@@ -38,8 +38,8 @@
         .button-container a {
             background-color: #FF6600;
             color: white;
-            font-size: 16px;
-            padding: 10px 20px;
+            font-size: 18px; /* تكبير حجم الخط */
+            padding: 15px 30px; /* تكبير حجم الحواف */
             border: none;
             border-radius: 10px;
             text-decoration: none;
@@ -51,13 +51,13 @@
         /* لجعل الكود متجاوبًا على الأجهزة الصغيرة */
         @media (max-width: 768px) {
             .button-container {
-                flex-direction: row; /* يضمن أن الأزرار تبقى أفقية حتى على الشاشات الصغيرة */
+                flex-direction: row;
                 bottom: 10px;
                 gap: 10px;
             }
             .button-container a {
-                padding: 10px;
-                font-size: 14px;
+                padding: 10px 20px;
+                font-size: 16px;
             }
         }
     </style>
